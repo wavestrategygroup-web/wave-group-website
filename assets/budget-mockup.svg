@@ -1,0 +1,67 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#0F3D37"/>
+      <stop offset="100%" stop-color="#29D5C1"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#29D5C1"/>
+      <stop offset="100%" stop-color="#0F3D37"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="480" height="360" rx="16" fill="#0F1113"/>
+  <rect x="0.5" y="0.5" width="479" height="359" rx="15.5" fill="none" stroke="rgba(255,255,255,0.08)"/>
+
+  <!-- wordmark -->
+  <text x="32" y="46" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="0.5" fill="#F5F5F5">WAVE</text>
+  <text x="32" y="64" font-family="Arial, sans-serif" font-size="10.5" fill="#9a9a9a">Annual Budget Tracker</text>
+
+  <!-- stat chips -->
+  <g font-family="Arial, sans-serif">
+    <rect x="32" y="82" width="118" height="3" fill="#29D5C1"/>
+    <text x="32" y="112" font-size="22" font-weight="700" fill="#F5F5F5">12</text>
+    <text x="32" y="128" font-size="9" fill="#9a9a9a">months tracked</text>
+
+    <rect x="180" y="82" width="118" height="3" fill="#29D5C1"/>
+    <text x="180" y="112" font-size="22" font-weight="700" fill="#F5F5F5">Auto</text>
+    <text x="180" y="128" font-size="9" fill="#9a9a9a">rollover</text>
+
+    <rect x="328" y="82" width="118" height="3" fill="#29D5C1"/>
+    <text x="328" y="112" font-size="22" font-weight="700" fill="#F5F5F5">0</text>
+    <text x="328" y="128" font-size="9" fill="#9a9a9a">re-entry</text>
+  </g>
+
+  <!-- bar chart: 12 months -->
+  <g>
+    <rect x="32"  y="245" width="18" height="35"  rx="2" fill="url(#barGrad)"/>
+    <rect x="58"  y="230" width="18" height="50"  rx="2" fill="url(#barGrad)"/>
+    <rect x="84"  y="215" width="18" height="65"  rx="2" fill="url(#barGrad)"/>
+    <rect x="110" y="225" width="18" height="55"  rx="2" fill="url(#barGrad)"/>
+    <rect x="136" y="205" width="18" height="75"  rx="2" fill="url(#barGrad)"/>
+    <rect x="162" y="195" width="18" height="85"  rx="2" fill="url(#barGrad)"/>
+    <rect x="188" y="220" width="18" height="60"  rx="2" fill="url(#barGrad)"/>
+    <rect x="214" y="210" width="18" height="70"  rx="2" fill="url(#barGrad)"/>
+    <rect x="240" y="185" width="18" height="95"  rx="2" fill="url(#barGrad)"/>
+    <rect x="266" y="175" width="18" height="105" rx="2" fill="url(#barGrad)"/>
+    <rect x="292" y="200" width="18" height="80"  rx="2" fill="url(#barGrad)"/>
+    <rect x="318" y="165" width="18" height="115" rx="2" fill="url(#barGrad)"/>
+  </g>
+
+  <!-- baseline -->
+  <line x1="32" y1="280" x2="336" y2="280" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- donut chart -->
+  <g transform="translate(408,232)">
+    <circle r="34" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="12"/>
+    <circle r="34" fill="none" stroke="url(#ringGrad)" stroke-width="12"
+            stroke-dasharray="128 214" stroke-dashoffset="0" transform="rotate(-90)"/>
+    <circle r="34" fill="none" stroke="#5FC4B0" stroke-width="12"
+            stroke-dasharray="40 214" stroke-dashoffset="-128" transform="rotate(-90)"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#F5F5F5" text-anchor="middle">45%</text>
+  </g>
+
+  <!-- trend line -->
+  <path d="M32,318 C90,300 120,326 180,308 C240,290 280,314 336,296"
+        fill="none" stroke="#29D5C1" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
