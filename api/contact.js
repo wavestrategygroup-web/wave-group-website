@@ -1,14 +1,14 @@
 // Vercel serverless function — sends the contact form via Resend.
 // Requires RESEND_API_KEY set as an environment variable in the Vercel project.
 //
-// Until wavegroup.capital is a verified sending domain in Resend, emails send
+// Until wavegrouphq.com is a verified sending domain in Resend, emails send
 // from Resend's shared test address (onboarding@resend.dev) with the visitor's
 // email set as reply-to — replying still reaches them fine. Once the domain is
 // verified, change FROM_ADDRESS below to something like
-// "Wave Group Website <inquiries@wavegroup.capital>".
+// "Wave Group Website <inquiries@wavegrouphq.com>".
 
 const FROM_ADDRESS = "Wave Group Website <onboarding@resend.dev>";
-const TO_ADDRESS = "inquiries@wavegroup.capital";
+const TO_ADDRESS = "inquiries@wavegrouphq.com";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
