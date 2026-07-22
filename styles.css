@@ -96,6 +96,7 @@ a.social-icon:hover{ color:var(--accent); }
 .social-icon.disabled{ color:rgba(255,255,255,0.18); cursor:default; }
 
 /* ---------- Page transitions ---------- */
+#app{ opacity:1; transition:opacity 0.2s ease; }
 @view-transition {
   navigation: auto;
 }
@@ -105,6 +106,7 @@ a.social-icon:hover{ color:var(--accent); }
   animation-timing-function: ease;
 }
 @media (prefers-reduced-motion: reduce) {
+  #app{ transition:none; }
   ::view-transition-group(*),
   ::view-transition-old(*),
   ::view-transition-new(*) {
